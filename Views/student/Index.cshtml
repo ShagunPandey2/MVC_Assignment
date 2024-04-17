@@ -1,0 +1,70 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model StudentData.Models.Student
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2 align="center">User Registration Form</h2>
+    <br />
+    <form asp-action="Details" method="POST" asp-controller="student">
+        <div class="card bg-light text-dark">
+            <div class="card-body">
+                
+          
+        <div align="center">  
+            
+
+            @* <label for="name">NAME</label> 
+            <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Your Name"> *@
+            @* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <br />
+        <div align="center">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <br />
+
+
+                <div align="center">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </div>
+        <br />
+
+                <div align="center">
+            <label for="Email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+            </div>
+            <br />
+
+                <div align="center">
+                    <button type="submit">Submit</button>
+                </div>
+
+            </div>
+        </div>
+        
+    </form>
+</body>
+</html>
